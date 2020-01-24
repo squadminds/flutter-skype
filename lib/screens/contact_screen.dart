@@ -1,7 +1,5 @@
 import 'package:chat_app/model/message.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../messages_list.dart';
 import 'contact_chat_screen.dart';
 import '../model/contact.dart';
 
@@ -15,7 +13,7 @@ class ContactsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    List<Message> messageList = Provider.of<MessageList>(context).messages;
+   // List<Message> messageList = Provider.of<MessageList>(context).messages;
 
     return Scaffold(
       appBar: AppBar(
@@ -37,7 +35,7 @@ class ContactsScreen extends StatelessWidget {
     );
   }
 
-  String lastMessage(List<Message> messages,int contactId){
+  String lstMessage(List<Message> messages,int contactId){
 
     if(messages.isNotEmpty) {
        return messages
